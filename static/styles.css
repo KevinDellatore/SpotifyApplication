@@ -1,0 +1,170 @@
+body {
+    background-color: rgb(37, 37, 37);
+    color: #ffffff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 10px 20px;
+}
+
+.container {
+    text-align: center;
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+.btn{
+    background-color: #1db954;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: background-color 0.3s ease; 
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #18bd52
+}
+
+.container {
+    text-align: center;
+    max-width: 40%;
+    margin-top: 80px;
+    padding: 20px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.collage{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:0px;
+}
+
+.collage .album{
+    position: relative;
+    margin: 0;
+}
+
+.collage div{
+    margin:0px;
+}
+
+.collage img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.collage .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.collage .album:hover .overlay {
+    opacity: 1;
+}
+
+.collage .overlay .text {
+    padding: 10px;
+}
+
+.header {
+    width: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+    background-color: #1db954;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #14833b;
+}
+
+.logout-button {
+    margin-left: auto;
+}
+
+.left-section{
+    display:flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 40px;
+    margin-right: 20px;
+}
+
+.nav-links{
+    display: flex;
+    gap: 20px;
+}
+
+.logout{
+    margin-left: auto;
+}
+
+.rangeButtons{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.rangeButtons button {
+    background-color: rgba(66, 66, 66, 0.8);
+    color: #ffffff;
+    border: none;
+    padding:10px 20px;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 0;
+    margin: 0;
+    height: 50px;
+    width: 150px;
+}
+
+.rangeButtons button:hover{
+    background-color: rgba(99, 99, 99, 0.8);
+}
+
+.rangeButtons button:active, .rangeButtons button:focus{
+    background-color: #3a3a3a;
+    outline: none;
+}
+

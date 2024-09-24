@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Tracks Collage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <div class="logo">
+                <!-- placeholder-->
+                <a href="/"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo"></a>
+            </div>
+            <nav class="nav-buttons">
+                <a href="{{ url_for('top_tracks') }}" class="nav-button">Home</a>
+                <a href="{{ url_for('about') }}" class="nav-button">About Me</a>
+            </nav>
+        </div>
+        <div class="logout">
+            <a href="{{ url_for('logout') }}" class="nav-button logout-button">Logout</a>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Your Top Tracks</h1>
+        <div class="collage">
+            {% for track in track_info %}
+                <div class="album">
+                    <img src="{{ track.art_Urls }}" alt="Album Art">
+                    <div class="overlay">
+                        <div class="text">
+                            <p>{{ track.track_name }}</p>
+                            <p>{{ track.album_name }}</p>
+                            <p>{{ track.artist_name }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="rangeButtons">
+        <form action="{{ url_for('top_tracks')}}" method = "POST">
+            <button type="submit" name="selection" value="short_term">4 Weeks</button>
+        </form>
+
+        <form action="{{ url_for('top_tracks')}}" method = "POST">
+            <button type="submit" name="selection" value="medium_term">6 Months</button>
+        </form>
+
+        <form action="{{ url_for('top_tracks')}}" method = "POST">
+            <button type="submit" name="selection" value="long_term">1 Year</button>
+        </form>
+    </div>
+</body>
+</html>

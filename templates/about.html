@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="left-section">
+            <div class="logo">
+                <!-- placeholder-->
+                <a href="/"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo"></a>
+            </div>
+            <nav class="nav-buttons">
+                <a href="{{ url_for('top_tracks') }}" class="nav-button">Home</a>
+                <a href="{{ url_for('about') }}" class="nav-button">About Me</a>
+            </nav>
+        </div>
+        <div class="logout">
+            <a href="{{ url_for('logout') }}" class="nav-button logout-button">Logout</a>
+        </div>
+    </header>
+    <div class="container">
+        <h1>About Me</h1>
+        <p>This is the About Me page. You can add more content here.</p>
+    </div>
+</body>
+</html>
